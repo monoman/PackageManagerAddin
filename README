@@ -1,0 +1,5 @@
+Will bring the needed bits from my fork on the Apache Licensed NuPack project (http://nupack.codeplex.com/SourceControl/network/Forks/monoman/KnowingNuPack) to here.
+
+This addin for MonoDevelop will be Apache Licensed as well. I think this is compatible with both projects' licenses.
+
+The idea is to have similar console and GUI (GTK# based) for what they have for VS2010.
