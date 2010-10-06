@@ -1,0 +1,12 @@
+bin/
+obj/
+*.suo
+*.userprefs
+*.pidb
+test-results/
+TestResult.xml
+*.VisualState.xml
+.hg/
+.hg*
+
+
