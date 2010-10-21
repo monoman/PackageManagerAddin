@@ -8,7 +8,7 @@ using NuPack;
 
 namespace NuPackAddin.Extensions
 {
-    public class DotNetProjectExtensions
+    public static class DotNetProjectExtensions
     {
         public static void AddPackage(this DotNetProject project, IPackage package)
         {
