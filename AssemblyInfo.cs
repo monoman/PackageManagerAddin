@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 // Information about this assembly is defined by the following attributes. 
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle("NuPackAddin")]
-[assembly: AssemblyDescription("MonoDevelop Addin for NuPack Integration")]
+[assembly: AssemblyTitle("MonoDevelop Addin for NuPack Integration")]
+[assembly: AssemblyDescription("Provides support for adding and maintaining Package References for managed projects.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCompany("NuPackAddin Project")]
+[assembly: AssemblyProduct("MonoDevelop")]
+[assembly: AssemblyCopyright("BSD")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

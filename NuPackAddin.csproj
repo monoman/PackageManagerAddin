@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>NuPackAddin</RootNamespace>
     <AssemblyName>NuPackAddin</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,6 +31,9 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NuPack.Core">
+      <HintPath>lib\NuPack.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <Package>gtk-sharp-2.0</Package>
@@ -54,6 +57,9 @@
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="AddNuPackage.cs" />
     <Compile Include="gtk-gui\NuPackAddin.AddNuPackage.cs" />
+    <Compile Include="NuPackAddin.Commands\PackageReferenceCommandHandler.cs" />
+    <Compile Include="NuPackAddin.Dialogs\AddPackageReferenceDialog.cs" />
+    <Compile Include="NuPackAddin.Extensions\DotNetProjectExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -61,4 +67,5 @@
       <LogicalName>gui.stetic</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
 </Project>
