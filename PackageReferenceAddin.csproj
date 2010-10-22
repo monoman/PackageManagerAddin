@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{B3FE612E-260C-40BC-8E2E-C5653F531AAA}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>NuPackAddin</RootNamespace>
-    <AssemblyName>NuPackAddin</AssemblyName>
+    <RootNamespace>PackageReferenceAddin</RootNamespace>
+    <AssemblyName>PackageReferenceAddin</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -31,6 +31,14 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\GtkSharp\2.12\lib\gtk-sharp-2.0\atk-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\GtkSharp\2.12\lib\gtk-sharp-2.0\glib-sharp.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Addins">
       <HintPath>lib\Mono.Addins.dll</HintPath>
     </Reference>
@@ -58,11 +66,10 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="AddNuPackage.cs" />
-    <Compile Include="gtk-gui\NuPackAddin.AddNuPackage.cs" />
-    <Compile Include="NuPackAddin.Commands\PackageReferenceCommandHandler.cs" />
-    <Compile Include="NuPackAddin.Dialogs\AddPackageReferenceDialog.cs" />
-    <Compile Include="NuPackAddin.Extensions\DotNetProjectExtensions.cs" />
+    <Compile Include="gtk-gui\PackageReferenceAddin.Dialogs.AddPackageReferenceDialog.cs" />
+    <Compile Include="PackageReferenceAddin.Commands\PackageReferenceCommandHandler.cs" />
+    <Compile Include="PackageReferenceAddin.Dialogs\AddPackageReferenceDialog.cs" />
+    <Compile Include="PackageReferenceAddin.Extensions\DotNetProjectExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -70,5 +77,13 @@
       <LogicalName>gui.stetic</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="addin-project.xml" />
+    <None Include="README" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="COPYRIGHT.txt" />
+    <None Include="CREDITS.txt" />
+    <None Include="LICENSE.txt" />
+  </ItemGroup>
 </Project>

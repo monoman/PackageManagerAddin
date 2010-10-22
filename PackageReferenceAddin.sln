@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Web Developer Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuPackAddin", "NuPackAddin.csproj", "{B3FE612E-260C-40BC-8E2E-C5653F531AAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageReferenceAddin", "PackageReferenceAddin.csproj", "{B3FE612E-260C-40BC-8E2E-C5653F531AAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +18,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = NuPackAddin.csproj
+		StartupItem = PackageReferenceAddin.csproj
 	EndGlobalSection
 EndGlobal

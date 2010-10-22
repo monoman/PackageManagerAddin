@@ -10,10 +10,10 @@ using MonoDevelop.Projects;
 using MonoDevelop.Ide.Gui.Components;
 using MonoDevelop.Ide;
 
-using NuPackAddin.Dialogs;
-using NuPackAddin.Extensions;
+using PackageReferenceAddin.Dialogs;
+using PackageReferenceAddin.Extensions;
 
-namespace NuPackAddin.Commands
+namespace PackageReferenceAddin.Commands
 {
     public enum PackageReferenceCommands
     {
@@ -26,14 +26,13 @@ namespace NuPackAddin.Commands
 
     public class PackageReferenceCommandHandler : NodeCommandHandler
     {
-        /// <summary>Execute the command for adding a new package reference to a project.</summary>
         [CommandHandler(PackageReferenceCommands.Add)]
         public void NewPackageReference()
         {
             // Get the project and project folder
             DotNetProject project = CurrentNode.GetParentDataItem(typeof(DotNetProject), true) as DotNetProject;
 
-            AddPackageReferenceDialog dialog = new AddPackageReferenceDialog(project);
+            AddPackageReferenceDialog dialog = new AddPackageReferenceDialog().SetProject(project);
 
             try
             {

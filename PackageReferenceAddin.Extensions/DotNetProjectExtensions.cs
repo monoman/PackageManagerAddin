@@ -6,7 +6,7 @@ using System.Text;
 using MonoDevelop.Projects;
 using NuPack;
 
-namespace NuPackAddin.Extensions
+namespace PackageReferenceAddin.Extensions
 {
     public static class DotNetProjectExtensions
     {

@@ -1,0 +1,25 @@
+PackageReferenceAddin Project
+Copyright 2010 PackageReferenceAddin Team
+
+PackageReferenceAddin includes works distributed under the licenses listed below. The full text for most of the licenses listed below can be found in the LICENSE.txt file accompanying each work. The original copyright notices have been preserved within the respective files and or packages. Please refer to the specific files and/or packages for more detailed information about the authors, copyright notices, and licenses.
+
+This software includes software developed at
+The Outercurve Foundation (http://www.outercurve.org/).
+
+NuPack
+----- 
+Website:      http://msdn.microsoft.com/en-us/library/bb166441(VS.80).aspx 
+Copyright:    Copyright (c) 2010 Outercurve Foundation
+License:      Apache 2.0
+
+ProvideBindingPathAttribute (Visual Studio SDK)
+----- 
+Website:      http://msdn.microsoft.com/en-us/library/bb166441(VS.80).aspx 
+Copyright:    Copyright (c) 2010 Microsoft
+License:      Apache 2.0
+
+This software includes software developed at
+MonoDevelop Project (http://www.monodevelop.com/).
+
+Copyright:    Copyright (c) 2010 MonoDevelop Team
+License:      GNU LESSER GENERAL PUBLIC LICENSE && MIT X11
