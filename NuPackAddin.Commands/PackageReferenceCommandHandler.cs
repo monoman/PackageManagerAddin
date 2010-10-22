@@ -11,6 +11,7 @@ using MonoDevelop.Ide.Gui.Components;
 using MonoDevelop.Ide;
 
 using NuPackAddin.Dialogs;
+using NuPackAddin.Extensions;
 
 namespace NuPackAddin.Commands
 {
