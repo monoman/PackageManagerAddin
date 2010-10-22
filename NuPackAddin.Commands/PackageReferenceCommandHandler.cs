@@ -26,7 +26,7 @@ namespace NuPackAddin.Commands
 
     public class PackageReferenceCommandHandler : NodeCommandHandler
     {
-        /// <summary>Execute the command for adding a new web reference to a project.</summary>
+        /// <summary>Execute the command for adding a new package reference to a project.</summary>
         [CommandHandler(PackageReferenceCommands.Add)]
         public void NewPackageReference()
         {
