@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Web Developer Express 2010
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageReferenceAddin", "PackageReferenceAddin.csproj", "{B3FE612E-260C-40BC-8E2E-C5653F531AAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuPack.Core", "knowingnupack\NuPack.Core\NuPack.Core.csproj", "{F879F274-EFA0-4157-8404-33A19B4E6AEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,11 +15,13 @@ Global
 		{B3FE612E-260C-40BC-8E2E-C5653F531AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3FE612E-260C-40BC-8E2E-C5653F531AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3FE612E-260C-40BC-8E2E-C5653F531AAA}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+		{F879F274-EFA0-4157-8404-33A19B4E6AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F879F274-EFA0-4157-8404-33A19B4E6AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = PackageReferenceAddin.csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

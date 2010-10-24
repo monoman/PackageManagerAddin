@@ -5,7 +5,6 @@
     <target-gtk-version>2.12</target-gtk-version>
   </configuration>
   <import>
-    <widget-library name="MonoDevelop.Ide, Version=2.4.0.0, Culture=neutral" />
     <widget-library name="../bin/Debug/PackageReferenceAddin.dll" internal="true" />
   </import>
   <widget class="Gtk.Dialog" id="PackageReferenceAddin.Dialogs.AddPackageReferenceDialog" design-size="597 383">

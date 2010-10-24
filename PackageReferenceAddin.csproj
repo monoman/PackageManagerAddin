@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>PackageReferenceAddin</RootNamespace>
     <AssemblyName>PackageReferenceAddin</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -39,29 +39,22 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files (x86)\GtkSharp\2.12\lib\gtk-sharp-2.0\glib-sharp.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.Addins">
-      <HintPath>lib\Mono.Addins.dll</HintPath>
-    </Reference>
-    <Reference Include="NuPack.Core">
-      <HintPath>lib\NuPack.Core.dll</HintPath>
-    </Reference>
     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="MonoDevelop.Core, Version=2.4.0.0, Culture=neutral">
-      <Package>monodevelop</Package>
       <HintPath>..\..\..\..\Program Files (x86)\MonoDevelop\bin\MonoDevelop.Core.dll</HintPath>
     </Reference>
     <Reference Include="MonoDevelop.Ide, Version=2.4.0.0, Culture=neutral">
-      <Package>monodevelop</Package>
       <HintPath>..\..\..\..\Program Files (x86)\MonoDevelop\bin\MonoDevelop.Ide.dll</HintPath>
     </Reference>
-    <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="Mono.Posix" />
-    <Reference Include="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="Mono.Addins, Version=0.5.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <HintPath>lib\Mono.Addins.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
@@ -85,5 +78,20 @@
     <None Include="COPYRIGHT.txt" />
     <None Include="CREDITS.txt" />
     <None Include="LICENSE.txt" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <DotNetNamingPolicy DirectoryNamespaceAssociation="Flat" ResourceNamePolicy="FileFormatDefault" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <ProjectReference Include="knowingnupack\NuPack.Core\NuPack.Core.csproj">
+      <Project>{F879F274-EFA0-4157-8404-33A19B4E6AEC}</Project>
+      <Name>NuPack.Core</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
