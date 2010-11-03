@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 using MonoDevelop.Projects;
-using NuPack;
+using NuGet;
 
 namespace PackageReferenceAddin.Dialogs
 {
