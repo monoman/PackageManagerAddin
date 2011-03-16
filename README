@@ -1,5 +1,5 @@
-Nupack bits come from my fork on the Apache Licensed NuPack project (http://nupack.codeplex.com/SourceControl/network/Forks/monoman/KnowingNuPack) to here.
+NuGet bits come from its default feed of packages.
 
-This addin for MonoDevelop will be Apache Licensed as well. I think this is compatible with both projects' licenses.
+This addin for MonoDevelop will be Apache Licensed as NuGet. I think this is compatible with both projects' licenses.
 
-The idea is to have similar console and GUI (GTK# based) for what they have for VS2010.
+The idea is to have similar GUI (GTK# based) for what they have for VS2010, or better.
