@@ -93,4 +93,7 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>"$(SolutionDir)tools\nuget" install "$(ProjectDir)packages.config" -o "$(SolutionDir)packages"</PreBuildEvent>
+  </PropertyGroup>
 </Project>
