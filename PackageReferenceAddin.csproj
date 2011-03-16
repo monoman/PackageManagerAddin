@@ -53,6 +53,10 @@
     <Reference Include="Mono.Addins, Version=0.5.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
       <HintPath>lib\Mono.Addins.dll</HintPath>
     </Reference>
+    <Reference Include="NuGet.Core, Version=1.1.229.159, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\NuGet.Core.1.1.229.159\lib\net40\NuGet.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System" />
   </ItemGroup>
@@ -72,18 +76,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="addin-project.xml" />
+    <None Include="packages.config" />
     <None Include="README" />
   </ItemGroup>
   <ItemGroup>
     <None Include="COPYRIGHT.txt" />
     <None Include="CREDITS.txt" />
     <None Include="LICENSE.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="NuGet\NuPack.Core\NuGet.Core.csproj">
-      <Project>{F879F274-EFA0-4157-8404-33A19B4E6AEC}</Project>
-      <Name>NuGet.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
