@@ -11,6 +11,7 @@ namespace PackageReferenceAddin.Dialogs
     public partial class AddPackageReferenceDialog : Gtk.Dialog
     {
         private DotNetProject project;
+		private IPackageRepository repository;
 
         public IPackage SelectedPackage { get; private set; }
 
@@ -25,10 +26,18 @@ namespace PackageReferenceAddin.Dialogs
             return this;
         }
 
-        protected virtual void OnButtonCloseClicked(object sender, System.EventArgs e)
-        {
-            this.Destroy();
-        }
+		public AddPackageReferenceDialog SetPackageRepository(IPackageRepository repository)
+		{
+			this.repository = repository;
+			return this;
+		}
+
+		protected virtual void OnButtonCloseClicked(object sender, System.EventArgs e)
+		{
+			// hardcode for now
+			SelectedPackage = repository == null ? null : repository.FindPackage("NUnit");
+			this.Destroy();
+		}
 
         protected virtual void OnButtonSettingsClicked(object sender, System.EventArgs e)
         {
