@@ -85,6 +85,9 @@
     <None Include="CREDITS.txt" />
     <None Include="LICENSE.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="tools\NuGet.exe" />
+  </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>
