@@ -1,7 +1,7 @@
 <AddinProject appVersion="2.4">
 	<Project platforms="Mac Linux Win32">
-		<AddinFile>bin/Debug/PackageReferenceAddin.dll</AddinFile>
-		<BuildFile>PackageReferenceAddin.sln</BuildFile>
+		<AddinFile>bin/Debug/PackageManagerAddin.dll</AddinFile>
+		<BuildFile>PackageManagerAddin.sln</BuildFile>
 		<BuildConfiguration>Debug</BuildConfiguration>
 	</Project>
 </AddinProject>

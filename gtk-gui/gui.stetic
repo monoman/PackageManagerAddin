@@ -5,11 +5,11 @@
     <target-gtk-version>2.12</target-gtk-version>
   </configuration>
   <import>
-    <widget-library name="../bin/Debug/PackageReferenceAddin.dll" internal="true" />
+    <widget-library name="../bin/Debug/PackageManagerAddin.dll" internal="true" />
   </import>
-  <widget class="Gtk.Dialog" id="PackageReferenceAddin.Dialogs.AddPackageReferenceDialog" design-size="597 383">
+  <widget class="Gtk.Dialog" id="PackageManagerAddin.Dialogs.ManagePackagesDialog" design-size="597 383">
     <property name="MemberName" />
-    <property name="Title" translatable="yes">Add Package Reference</property>
+    <property name="Title" translatable="yes">Manage Packages</property>
     <property name="WindowPosition">CenterOnParent</property>
     <property name="Modal">True</property>
     <property name="Buttons">2</property>

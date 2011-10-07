@@ -6,16 +6,18 @@ using System.IO;
 
 using MonoDevelop.Projects;
 using NuGet;
+using System.Runtime.Versioning;
 
-namespace PackageReferenceAddin.Extensions
+namespace PackageManagerAddin.Extensions
 {
-    public static class DotNetProjectExtensions
-    {
+	public static class DotNetProjectExtensions
+	{
 		private class ProjectSystemWrapper : PhysicalFileSystem, IProjectSystem
 		{
 			private readonly DotNetProject project;
 
-			public ProjectSystemWrapper(DotNetProject project) : base(project.ParentSolution.BaseDirectory)
+			public ProjectSystemWrapper(DotNetProject project)
+				: base(project.ParentSolution.BaseDirectory)
 			{
 				this.project = project;
 			}
@@ -50,22 +52,32 @@ namespace PackageReferenceAddin.Extensions
 				throw new NotImplementedException();
 			}
 
-			public System.Runtime.Versioning.FrameworkName TargetFramework
+			public FrameworkName TargetFramework
 			{
-				get { return new System.Runtime.Versioning.FrameworkName(project.TargetFramework.ToString()); }
+				get { return new FrameworkName(project.TargetFramework.ToString()); }
 			}
 
+
+			public void AddFrameworkReference(string name)
+			{
+				throw new NotImplementedException();
+			}
+
+			public string ResolvePath(string path)
+			{
+				throw new NotImplementedException();
+			}
 		}
 
-        public static void AddPackage(this DotNetProject project, IPackage package, IPackageRepository repository)
-        {
+		public static void AddPackage(this DotNetProject project, IPackage package, IPackageRepository repository)
+		{
 			var packageManager = new PackageManager(repository, project.BaseDirectory);
 			packageManager.InstallPackage(package, false);
 			var projectSystem = new ProjectSystemWrapper(project);
 			var projectManager = new ProjectManager(repository, packageManager.PathResolver, projectSystem, packageManager.LocalRepository);
 			projectManager.AddPackageReference(package.Id);
 			project.NeedsReload = true;
-        }
+		}
 
 		private class Logger : ILogger
 		{
@@ -76,5 +88,5 @@ namespace PackageReferenceAddin.Extensions
 			}
 		}
 
-    }
+	}
 }

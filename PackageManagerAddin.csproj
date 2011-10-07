@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{B3FE612E-260C-40BC-8E2E-C5653F531AAA}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>PackageReferenceAddin</RootNamespace>
-    <AssemblyName>PackageReferenceAddin</AssemblyName>
+    <RootNamespace>PackageManagerAddin</RootNamespace>
+    <AssemblyName>PackageManagerAddin</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -20,7 +20,7 @@
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <ConsolePause>true</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -28,7 +28,7 @@
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <ConsolePause>true</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
@@ -42,8 +42,7 @@
     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
     </Reference>
     <Reference Include="Mono.Addins, Version=0.6.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\Mono.Addins.0.6\lib\Mono.Addins.dll</HintPath>
+      <HintPath>packages\Mono.Addins.0.6.2\lib\Mono.Addins.dll</HintPath>
     </Reference>
     <Reference Include="MonoDevelop.Core, Version=2.4.0.0, Culture=neutral">
       <HintPath>..\..\..\..\Program Files (x86)\MonoDevelop\bin\MonoDevelop.Core.dll</HintPath>
@@ -54,9 +53,9 @@
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
     </Reference>
     <Reference Include="Mono.Posix" />
-    <Reference Include="NuGet.Core, Version=1.1.229.159, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="NuGet.Core, Version=1.5.20902.9026, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\NuGet.Core.1.1.229.159\lib\net40\NuGet.Core.dll</HintPath>
+      <HintPath>packages\NuGet.Core.1.5.20902.9026\lib\net40-Client\NuGet.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System" />
@@ -64,10 +63,10 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="gtk-gui\PackageReferenceAddin.Dialogs.AddPackageReferenceDialog.cs" />
-    <Compile Include="PackageReferenceAddin.Commands\PackageReferenceCommandHandler.cs" />
-    <Compile Include="PackageReferenceAddin.Dialogs\AddPackageReferenceDialog.cs" />
-    <Compile Include="PackageReferenceAddin.Extensions\DotNetProjectExtensions.cs" />
+    <Compile Include="gtk-gui\PackageManagerAddin.Dialogs.ManagePackagesDialog.cs" />
+    <Compile Include="PackageManagerAddin.Commands\PackageManagerCommandHandler.cs" />
+    <Compile Include="PackageManagerAddin.Dialogs\ManagePackagesDialog.cs" />
+    <Compile Include="PackageManagerAddin.Extensions\DotNetProjectExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -85,9 +84,6 @@
     <None Include="CREDITS.txt" />
     <None Include="LICENSE.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="tools\NuGet.exe" />
-  </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>
@@ -97,7 +93,4 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
-  <PropertyGroup>
-    <PreBuildEvent>"$(SolutionDir)tools\nuget" install "$(ProjectDir)packages.config" -o "$(SolutionDir)packages"</PreBuildEvent>
-  </PropertyGroup>
 </Project>
