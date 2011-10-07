@@ -145,7 +145,7 @@
                         <property name="CanFocus">True</property>
                         <property name="Editable">False</property>
                         <property name="Text">Created by: Monoman
-Version: 0.1.0
+Version: 0.1.0.2
 
 Dependencies:
 MonoDevelop</property>

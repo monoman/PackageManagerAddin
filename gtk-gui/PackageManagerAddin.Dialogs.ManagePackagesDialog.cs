@@ -142,7 +142,7 @@ namespace PackageManagerAddin.Dialogs
 			w11.Fill = false;
 			// Container child hbox3.Gtk.Box+BoxChild
 			this.textview2 = new global::Gtk.TextView();
-			this.textview2.Buffer.Text = "Created by: Monoman\nVersion: 0.1.0\n\nDependencies:\nMonoDevelop";
+			this.textview2.Buffer.Text = "Created by: Monoman\nVersion: 0.1.0.2\n\nDependencies:\nMonoDevelop";
 			this.textview2.CanFocus = true;
 			this.textview2.Name = "textview2";
 			this.textview2.Editable = false;
